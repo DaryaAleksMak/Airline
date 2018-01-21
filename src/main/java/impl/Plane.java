@@ -2,21 +2,43 @@ package impl;
 
 import iface.Aircraft;
 
-public abstract class Plane implements Aircraft {
+public class Plane {
     protected String model;
     protected int countSeats;
     protected int carrierCapacity;
     protected int fuelConsumption;
 
 
-    public Plane(String model, int countSeats, int carrierCapacity, int fuelConsumption) {
-        this.model = model;
-        this.countSeats = countSeats;
-        this.carrierCapacity = carrierCapacity;
-        this.fuelConsumption = fuelConsumption;
+    public String getModel() {
+        return model;
     }
 
+    public void setModel(String model) {
+        this.model = model;
+    }
 
+    public int getCountSeats() {
+        return countSeats;
+    }
 
+    public void setCountSeats(int countSeats) {
+        this.countSeats = countSeats;
+    }
+
+    public int getCarrierCapacity() {
+        return carrierCapacity;
+    }
+
+    public void setCarrierCapacity(int carrierCapacity) {
+        this.carrierCapacity = carrierCapacity;
+    }
+
+    public int getFuelConsumption() {
+        return fuelConsumption;
+    }
+
+    public void setFuelConsumption(int fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
 }
 

@@ -1,14 +1,13 @@
 package impl;
 
-import iface.Builder;
 
-public abstract class PlaneBuilder<T extends Plane> implements Builder {
+public abstract class PlaneBuilder<T extends Plane> {
     protected String model;
     protected int countSeats;
     protected int carrierCapacity;
     protected int fuelConsumption;
 
-    PlaneBuilder buildModel(String model){
+    public PlaneBuilder buildModel(String model){
         this.model = model;
         return this;
     }
