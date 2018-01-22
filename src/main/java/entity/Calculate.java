@@ -1,18 +1,37 @@
 package entity;
 
-public class Airline {
-    public static int getTotalCapacity(){
+import impl.Plane;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class Calculate {
+    private List planes = new Hanhar().getPlanes();
+
+    public int getTotalCapacity()
+    {
+        Collection<Plane> collection = planes;
+        int sum = collection.stream()
+                .mapToInt(Plane::getCarrierCapacity)
+                .sum();
+        System.out.println(sum);
+
+
+
+
+
         return 0;
     }
 
-    public static int getCarrierCapacity(){
+    public int getCarrierCapacity(){
         return 0;
     }
 
-    public static void getListAircraft(){
+    public void getListAircraft(){
     }
 
-    public static int getFuelConsumption(){
+    public int getFuelConsumption(){
         return 0;
     }
 
