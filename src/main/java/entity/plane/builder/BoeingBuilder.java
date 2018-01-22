@@ -4,10 +4,6 @@ import entity.plane.company.Boeing;
 import impl.PlaneBuilder;
 
 public class BoeingBuilder extends PlaneBuilder {
-    protected String model;
-    protected int countSeats;
-    protected int carrierCapacity;
-    protected int fuelConsumption;
 
     public Boeing build() {
         Boeing boeing = new Boeing();

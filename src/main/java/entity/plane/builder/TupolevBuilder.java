@@ -4,10 +4,6 @@ import entity.plane.company.Tupolev;
 import impl.PlaneBuilder;
 
 public class TupolevBuilder extends PlaneBuilder {
-    protected String model;
-    protected int countSeats;
-    protected int carrierCapacity;
-    protected int fuelConsumption;
 
     public Tupolev build() {
         Tupolev tupolev = new Tupolev();
