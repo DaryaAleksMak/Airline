@@ -1,12 +1,11 @@
 package impl;
 
-import iface.Aircraft;
-
 public class Plane {
     protected String model;
     protected int countSeats;
     protected int carrierCapacity;
     protected int fuelConsumption;
+    protected int maxDistance;
 
 
     public String getModel() {
@@ -40,5 +39,23 @@ public class Plane {
     public void setFuelConsumption(int fuelConsumption) {
         this.fuelConsumption = fuelConsumption;
     }
+
+    public int getMaxDistance() {
+        return maxDistance;
+    }
+
+    public void setMaxDistance(int maxDistance) {
+        this.maxDistance = maxDistance;
+    }
+
+    public String toString() {
+        return "\033[0;1m" + "Model: " + model + ": " + "\033[0;37m" + "\n"
+                + "                " + "Count of seats: " + countSeats + "\n"
+                + "                " + "Carring capacity: " + carrierCapacity + "\n"
+                + "                " + "Fuel consuption: " + fuelConsumption + "kg/h" + "\n"
+                + "                " + "Max distance: " + maxDistance + "km" + "\n";
+    }
+
+
 }
 
