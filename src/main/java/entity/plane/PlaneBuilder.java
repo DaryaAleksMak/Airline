@@ -1,4 +1,4 @@
-package impl;
+package entity.plane;
 
 
 public abstract class PlaneBuilder<T extends Plane> {

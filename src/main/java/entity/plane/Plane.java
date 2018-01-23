@@ -1,4 +1,4 @@
-package impl;
+package entity.plane;
 
 public class Plane {
     protected String model;
@@ -49,7 +49,7 @@ public class Plane {
     }
 
     public String toString() {
-        return "\033[0;1m" + "Model: " + model + ": " + "\033[0;37m" + "\n"
+        return "\033[0;1m" + "Model: " + model + ": " + "\n"
                 + "                " + "Count of seats: " + countSeats + "\n"
                 + "                " + "Carring capacity: " + carrierCapacity + "\n"
                 + "                " + "Fuel consuption: " + fuelConsumption + "kg/h" + "\n"

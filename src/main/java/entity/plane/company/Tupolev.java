@@ -1,8 +1,7 @@
 package entity.plane.company;
 
-import iface.rangehaul.ShortHaul;
-import impl.Plane;
+import entity.plane.rangehaul.MediumHaul;
 
-public class Tupolev extends Plane implements ShortHaul {
+public class Tupolev extends MediumHaul {
 
 }

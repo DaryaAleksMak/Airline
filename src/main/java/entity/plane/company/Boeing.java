@@ -1,7 +1,9 @@
 package entity.plane.company;
 
-import iface.rangehaul.MediumHaul;
-import impl.Plane;
+import entity.plane.rangehaul.MediumHaul;
 
-public class Boeing extends Plane implements MediumHaul {
+public class Boeing extends MediumHaul {
+
+
+
 }

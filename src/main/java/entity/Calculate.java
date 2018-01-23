@@ -1,46 +1,72 @@
 package entity;
 
-import impl.Plane;
+import entity.plane.Plane;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Calculate {
-    private List planes = new Hanhar().getPlanes();
+    private Collection<Plane> collection;
 
-    public int getSumTotalCapacity()
-    {
-        Collection<Plane> collection = planes;
+    public Calculate() {
+        collection = new Hanhar().getPlanes();
+    }
+
+    /**
+     * @return  the total capacity of all the aircraft in the airline
+     */
+    public int getSumTotalCapacity() {
         int sum = collection.stream()
                 .mapToInt(Plane::getCountSeats)
                 .sum();
         return sum;
     }
 
-    public int getSumCarrierCapacity(){
-        Collection<Plane> collection = planes;
+    /**
+     * @return carrying capacity of all the aircraft in the airline
+     * */
+    public int getSumCarrierCapacity() {
         int sum = collection.stream()
                 .mapToInt(Plane::getCarrierCapacity)
                 .sum();
         return sum;
     }
 
-    public List<Plane> sortedByFlightRange(){
-        Collection<Plane> collection = planes;
+    /**
+     *@return list of airplanes of the company sorted by flight range
+     */
+    public List<Plane> sortedByFlightRange() {
         return collection.stream().
-                sorted((o1, o2) -> -((Integer) o1.MAX_DISTANCE).compareTo(((Integer)o2.MAX_DISTANCE)))
+                sorted((o1, o2) -> -((Integer) o1.getMaxDistance())
+                        .compareTo(((Integer) o2.getMaxDistance())))
                 .collect(Collectors.toList());
 
     }
 
-    public List<Plane> filterRangeOfFuelConsumption(int min, int max){
-        Collection<Plane> collection = planes;
+    /**
+     * @return list of airplanes corresponding to a given range of fuel consumption parameters
+     */
+    public List<Plane> filterRangeOfFuelConsumption(int min, int max) {
+//        isValidValues(min, max);
         List<Plane> list = collection.stream()
-                .filter((s) -> s.getFuelConsumption() >=min && s.getFuelConsumption() <= max )
+                .filter((s) -> s.getFuelConsumption() >= min
+                        && s.getFuelConsumption() <= max)
                 .collect(Collectors.toList());
         return list;
     }
+
+    public Collection<Plane> getCollection() {
+        return collection;
+    }
+
+    public void setCollection(Collection<Plane> collection) {
+        this.collection = collection;
+    }
+
+//    private void isValidValues(int min, int max) {
+//        if ()
+//    }
+
 
 }

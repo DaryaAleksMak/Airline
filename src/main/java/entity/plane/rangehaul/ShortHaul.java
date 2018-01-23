@@ -1,6 +1,6 @@
-package iface.rangehaul;
+package entity.plane.rangehaul;
 
-import impl.Plane;
+import entity.plane.Plane;
 
 public abstract class ShortHaul extends Plane {
     final static int MAX_CAPACITY = 100;

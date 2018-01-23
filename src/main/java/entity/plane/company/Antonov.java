@@ -1,7 +1,9 @@
 package entity.plane.company;
 
-import iface.rangehaul.ShortHaul;
-import impl.Plane;
+import entity.plane.rangehaul.ShortHaul;
 
-public class Antonov extends Plane implements ShortHaul {
+public class Antonov extends ShortHaul {
+
+
+
 }
