@@ -52,7 +52,7 @@ public class View {
             switch (menuItem) {
                 case 1:
                     headView();
-                    System.out.println("\033[0;1m" + "1. Calculate the total capacity: " + calculate.getSumTotalCapacity() + "\033[0;37m");
+                    System.out.println("1. Calculate the total capacity: " + calculate.getSumTotalCapacity());
                     System.out.println("--------------------------------------------------------------------------------------------");
                     System.out.println("2. Calculate the carrying capacity: ");
                     System.out.println("--------------------------------------------------------------------------------------------");
@@ -69,7 +69,7 @@ public class View {
                     headView();
                     System.out.println("1. Calculate the total capacity: ");
                     System.out.println("--------------------------------------------------------------------------------------------");
-                    System.out.println("\033[0;1m" + "2. Calculate the carrying capacity: " + calculate.getSumCarrierCapacity() + " kg" + "\033[0;37m");
+                    System.out.println("2. Calculate the carrying capacity: " + calculate.getSumCarrierCapacity() + " kg");
                     System.out.println("--------------------------------------------------------------------------------------------");
                     System.out.println("3. Find airplanes corresponding to a given");
                     System.out.println("   range of fuel consumption parameters: ");
@@ -86,11 +86,11 @@ public class View {
                     System.out.println("--------------------------------------------------------------------------------------------");
                     System.out.println("2. Calculate the carrying capacity: ");
                     System.out.println("--------------------------------------------------------------------------------------------");
-                    System.out.println("\033[0;1m" + "3. Find airplanes corresponding to a given");
-                    System.out.println("   range of fuel consumption parameters: " + "\033[0;37m");
+                    System.out.println("3. Find airplanes corresponding to a given");
+                    System.out.println("   range of fuel consumption parameters: ");
                     printRangeOfFuel();
                     printListPlanes(calculate.filterRangeOfFuelConsumption(2000, 4000));
-                    System.out.println("\033[0;37m" + "--------------------------------------------------------------------------------------------");
+                    System.out.println("--------------------------------------------------------------------------------------------");
                     System.out.println("4. Display the list of aircraft of the          " + "                                      ");
                     System.out.println("   company sorted by flight range : " + "                                                     ");
                     System.out.println("--------------------------------------------------------------------------------------------");
@@ -106,11 +106,11 @@ public class View {
                     System.out.println("3. Find airplanes corresponding to a given");
                     System.out.println("   range of fuel consumption parameters: ");
                     System.out.println("--------------------------------------------------------------------------------------------");
-                    System.out.println("\033[0;1m" + "4. Display the list of aircraft of the          " + "                                      ");
+                    System.out.println("4. Display the list of aircraft of the          " + "                                      ");
                     System.out.println("   company sorted by flight range : " + "                                                     ");
                     System.out.println();
                     printListPlanes(calculate.sortedByFlightRange());
-                    System.out.println("\033[0;37m" + "--------------------------------------------------------------------------------------------");
+                    System.out.println("--------------------------------------------------------------------------------------------");
                     System.out.println("5. Exit");
                     System.out.println("--------------------------------------------------------------------------------------------");
                     break;
@@ -118,11 +118,11 @@ public class View {
                     quit = true;
                     break;
                 default:
-                    System.out.println("\u001B[31m" + "INVALID CHOICE!" + "\033[0;1m" + " Try again");
+                    System.out.println("INVALID CHOICE!" + " Try again");
             }
         } while (!quit);
 
-        System.out.println("\n" + "\033[0;1m" + "GOOD LUCK!");
+        System.out.println("GOOD LUCK!");
     }
 
 
@@ -135,7 +135,7 @@ public class View {
 
     private void printRangeOfFuel() {
 
-        System.out.println("\033[0;1m" + "Input range[1000,7000] values: ");
+        System.out.println("Input range[1000,7000] values: ");
         Scanner sc = new Scanner(System.in);
         while (true)
         try{
@@ -143,7 +143,7 @@ public class View {
             sc.nextInt();
             break;
         }catch (InputMismatchException e){
-            System.out.println("\u001B[31m" + "Input incorrect value!" + "\033[0;1m" + " Try again");
+            System.out.println("Input incorrect value!"+" Try again");
             sc.next();
         }
         while (true)
@@ -152,7 +152,7 @@ public class View {
             sc.nextInt();
             break;
         }catch (InputMismatchException e){
-            System.out.println("\u001B[31m" + "Input incorrect value!" + "\033[0;1m" + " Try again");
+            System.out.println("Input incorrect value!" +  " Try again");
             sc.next();
         }
     }
