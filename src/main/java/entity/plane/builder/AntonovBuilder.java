@@ -1,7 +1,7 @@
 package entity.plane.builder;
 
 import entity.plane.company.Antonov;
-import impl.PlaneBuilder;
+import entity.plane.PlaneBuilder;
 
 public class AntonovBuilder extends PlaneBuilder {
 
@@ -11,7 +11,7 @@ public class AntonovBuilder extends PlaneBuilder {
         antonov.setCountSeats(countSeats);
         antonov.setCarrierCapacity(carrierCapacity);
         antonov.setFuelConsumption(fuelConsumption);
-
+        antonov.setMaxDistance(maxDistance);
         return antonov;
     }
 }

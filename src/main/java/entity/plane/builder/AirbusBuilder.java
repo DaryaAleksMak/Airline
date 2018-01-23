@@ -1,10 +1,9 @@
 package entity.plane.builder;
 
 import entity.plane.company.Airbus;
-import impl.PlaneBuilder;
+import entity.plane.PlaneBuilder;
 
 public class AirbusBuilder extends PlaneBuilder {
-
 
     public Airbus build() {
         Airbus airbus = new Airbus();
@@ -12,8 +11,7 @@ public class AirbusBuilder extends PlaneBuilder {
         airbus.setCountSeats(countSeats);
         airbus.setCarrierCapacity(carrierCapacity);
         airbus.setFuelConsumption(fuelConsumption);
-
+        airbus.setMaxDistance(maxDistance);
         return airbus;
     }
-
 }

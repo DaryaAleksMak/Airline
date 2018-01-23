@@ -1,7 +1,7 @@
 package entity.plane.builder;
 
 import entity.plane.company.Boeing;
-import impl.PlaneBuilder;
+import entity.plane.PlaneBuilder;
 
 public class BoeingBuilder extends PlaneBuilder {
 
@@ -11,7 +11,7 @@ public class BoeingBuilder extends PlaneBuilder {
         boeing.setCountSeats(countSeats);
         boeing.setCarrierCapacity(carrierCapacity);
         boeing.setFuelConsumption(fuelConsumption);
-
+        boeing.setMaxDistance(maxDistance);
         return boeing;
     }
 }

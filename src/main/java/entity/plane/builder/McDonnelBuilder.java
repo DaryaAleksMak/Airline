@@ -1,7 +1,7 @@
 package entity.plane.builder;
 
 import entity.plane.company.McDonnel;
-import impl.PlaneBuilder;
+import entity.plane.PlaneBuilder;
 
 public class McDonnelBuilder extends PlaneBuilder {
 
@@ -11,6 +11,8 @@ public class McDonnelBuilder extends PlaneBuilder {
         mcDonnel.setCountSeats(countSeats);
         mcDonnel.setCarrierCapacity(carrierCapacity);
         mcDonnel.setFuelConsumption(fuelConsumption);
+        mcDonnel.setMaxDistance(maxDistance);
+
 
         return mcDonnel;
     }

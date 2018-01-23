@@ -1,7 +1,7 @@
 package entity.plane.builder;
 
 import entity.plane.company.Tupolev;
-import impl.PlaneBuilder;
+import entity.plane.PlaneBuilder;
 
 public class TupolevBuilder extends PlaneBuilder {
 
@@ -11,7 +11,7 @@ public class TupolevBuilder extends PlaneBuilder {
         tupolev.setCountSeats(countSeats);
         tupolev.setCarrierCapacity(carrierCapacity);
         tupolev.setFuelConsumption(fuelConsumption);
-
+        tupolev.setMaxDistance(maxDistance);
         return tupolev;
     }
 }
