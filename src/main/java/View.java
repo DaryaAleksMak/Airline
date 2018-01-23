@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class View {
     public View headView() {
         System.out.println("--------------------------------------------------------------------------------------------");
-        System.out.println("                            " + "\033[0;1m" + "      WELCOME TO GL AIRLINE" + "\033[0;37m" + "                                     ");
+        System.out.println("                            " +  "      WELCOME TO GL AIRLINE" +  "                                     ");
         System.out.println("--------------------------------------------------------------------------------------------");
         return new View();
     }
@@ -40,11 +40,11 @@ public class View {
             while (true){
                  sc = new Scanner(System.in);
                 try{
-                    System.out.print("\033[0;1m" + "Choose menu item: " + "\033[0;37m");
+                    System.out.print("Choose menu item: ");
                     menuItem = sc.nextInt();
                     break;
                 }catch (InputMismatchException e){
-                    System.out.println("\u001B[31m" + "Input incorrect value!" + "\033[0;1m" + " Try again");
+                    System.out.println( "Input incorrect value!" + " Try again");
                     sc.next();
                 }
             }
