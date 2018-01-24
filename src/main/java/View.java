@@ -37,17 +37,7 @@ public class View {
         int menuItem;
 
         do {
-            while (true){
-                 sc = new Scanner(System.in);
-                try{
-                    System.out.print("Choose menu item: ");
-                    menuItem = sc.nextInt();
-                    break;
-                }catch (InputMismatchException e){
-                    System.out.println( "Input incorrect value!" + " Try again");
-                    sc.next();
-                }
-            }
+            menuItem =inputValue("Choose menu item: ");
 
             switch (menuItem) {
                 case 1:
@@ -88,8 +78,8 @@ public class View {
                     System.out.println("--------------------------------------------------------------------------------------------");
                     System.out.println("3. Find airplanes corresponding to a given");
                     System.out.println("   range of fuel consumption parameters: ");
-                    printRangeOfFuel();
-                    printListPlanes(calculate.filterRangeOfFuelConsumption(2000, 4000));
+                    System.out.println("Input range[1000,7000] values: ");
+                    printListPlanes(calculate.filterRangeOfFuelConsumption(inputValue("min = "), inputValue("max = ")));
                     System.out.println("--------------------------------------------------------------------------------------------");
                     System.out.println("4. Display the list of aircraft of the          " + "                                      ");
                     System.out.println("   company sorted by flight range : " + "                                                     ");
@@ -133,28 +123,19 @@ public class View {
         }
     }
 
-    private void printRangeOfFuel() {
-
-        System.out.println("Input range[1000,7000] values: ");
+    private int inputValue(String param) {
         Scanner sc = new Scanner(System.in);
+        int value;
         while (true)
-        try{
-            System.out.print("min = ");
-            sc.nextInt();
-            break;
-        }catch (InputMismatchException e){
-            System.out.println("Input incorrect value!"+" Try again");
-            sc.next();
-        }
-        while (true)
-        try{
-            System.out.print("max = ");
-            sc.nextInt();
-            break;
-        }catch (InputMismatchException e){
-            System.out.println("Input incorrect value!" +  " Try again");
-            sc.next();
-        }
+            try{
+                System.out.print(param);
+                value =sc.nextInt();
+                break;
+            }catch (InputMismatchException e){
+                System.out.println("Input incorrect value!"+" Try again");
+                sc.next();
+            }
+        return value;
     }
 
 

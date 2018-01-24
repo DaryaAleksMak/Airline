@@ -49,7 +49,7 @@ public class Plane {
     }
 
     public String toString() {
-        return "\033[0;1m" + "Model: " + model + ": " + "\n"
+        return "Model: " + model + ": " + "\n"
                 + "                " + "Count of seats: " + countSeats + "\n"
                 + "                " + "Carring capacity: " + carrierCapacity + "\n"
                 + "                " + "Fuel consuption: " + fuelConsumption + "kg/h" + "\n"
